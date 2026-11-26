@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+
+/*
+ * JOSTECAHAAN MOTORS design tokens.
+ * Tailwind turns each of these into utilities, for example
+ *   --color-gold     ->  text-gold, bg-gold, border-gold
+ *   --font-display   ->  font-display
+ * Change a value here and it updates across the whole site.
+ */
+@theme {
+  /* Charcoal / black surfaces */
+  --color-ink: #0c0c0e;
+  --color-charcoal: #151518;
+  --color-graphite: #1f1f23;
+  --color-line: #2c2b2f;
+
+  /* Champagne gold accents */
+  --color-gold: #c8a96b;
+  --color-gold-light: #e0c995;
+  --color-gold-deep: #9c8051;
+
+  /* Warm ivory text */
+  --color-ivory: #f4efe4;
+  --color-ivory-muted: #b9b2a4;
+  --color-ivory-faint: #7d786e;
+
+  --font-sans: 'Manrope Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Cormorant Garamond', ui-serif, Georgia, serif;
+
+  --tracking-wordmark: 0.32em;
+  --tracking-label: 0.22em;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-ink font-sans text-ivory antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-gold text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-gold;
+  }
+}
+
+@layer components {
+  /* Small uppercase label used above section headings, e.g. "01 — Inventory" */
+  .eyebrow {
+    @apply text-[0.7rem] font-semibold tracking-label text-gold uppercase;
+  }
+}
