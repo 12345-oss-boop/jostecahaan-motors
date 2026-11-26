@@ -4,6 +4,7 @@ import { ButtonLink } from '@/components/ui/ButtonLink'
 import { Container } from '@/components/ui/Container'
 import { routes } from '@/config/routes'
 
+/** Shown for unknown URLs and for vehicles that no longer exist. */
 export function NotFoundPage() {
   return (
     <>
@@ -11,10 +12,13 @@ export function NotFoundPage() {
       <PageHeader
         eyebrow="404"
         title="This road doesn’t go anywhere."
-        intro="The page you were looking for does not exist or has moved."
+        intro="The page you were looking for does not exist, or the vehicle may have been removed."
       />
-      <Container className="py-16">
-        <ButtonLink to={routes.home}>Return home</ButtonLink>
+      <Container className="flex flex-col gap-3 py-16 sm:flex-row">
+        <ButtonLink to={routes.vehicles}>Browse inventory</ButtonLink>
+        <ButtonLink to={routes.home} variant="outline">
+          Return home
+        </ButtonLink>
       </Container>
     </>
   )

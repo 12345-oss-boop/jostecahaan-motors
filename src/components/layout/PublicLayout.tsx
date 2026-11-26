@@ -1,8 +1,12 @@
-import { Outlet, ScrollRestoration } from 'react-router'
+import { Outlet, ScrollRestoration, useMatch } from 'react-router'
+import { FloatingWhatsApp } from '@/components/contact/FloatingWhatsApp'
 import { SiteFooter } from '@/components/layout/SiteFooter'
 import { SiteHeader } from '@/components/layout/SiteHeader'
 
 export function PublicLayout() {
+  // Vehicle pages have their own vehicle-specific WhatsApp button instead.
+  const onVehiclePage = useMatch('/vehicles/:slug')
+
   return (
     <div className="flex min-h-dvh flex-col">
       <a
@@ -16,6 +20,7 @@ export function PublicLayout() {
         <Outlet />
       </main>
       <SiteFooter />
+      {!onVehiclePage && <FloatingWhatsApp />}
       <ScrollRestoration />
     </div>
   )
