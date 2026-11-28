@@ -3,6 +3,7 @@ import { Container } from '@/components/ui/Container'
 import { Wordmark } from '@/components/ui/Wordmark'
 import { primaryNav } from '@/config/routes'
 import { site } from '@/config/site'
+import { usingDemoInventory } from '@/features/vehicles/vehicleService'
 import { phoneLink, whatsappLink } from '@/lib/contact'
 
 const currentYear = new Date().getFullYear()
@@ -63,6 +64,7 @@ export function SiteFooter() {
           <p>
             © {currentYear} {site.name}. All rights reserved.
           </p>
+          {usingDemoInventory && <p>Vehicle listings currently shown are demonstration content.</p>}
           <p>Website by {site.builtBy.name}</p>
         </Container>
       </div>
