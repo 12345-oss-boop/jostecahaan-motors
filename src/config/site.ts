@@ -18,10 +18,10 @@ export const site = {
   openingHours: null as string | null,
   contact: {
     /** International format, digits only, as required by WhatsApp links. */
-    whatsapp: '254725111843',
+    whatsapp: '254702476311',
     /** Phone number for the "Call" button (E.164 format). */
-    phone: '+254725111843',
-    phoneDisplay: '+254 725 111 843',
+    phone: '+254702476311',
+    phoneDisplay: '+254 702 476 311',
   },
   builtBy: { name: 'NovaPixel Labs' },
 } as const
