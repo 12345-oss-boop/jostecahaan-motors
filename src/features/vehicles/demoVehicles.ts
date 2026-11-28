@@ -38,7 +38,12 @@ export const demoVehicles: Vehicle[] = [
       'Cruise control',
       'Keyless entry',
     ],
-    images: [],
+    images: [
+      {
+        src: '/images/vehicles/2019-toyota-land-cruiser-prado-tx-l/01-front-three-quarter.webp',
+        alt: 'Front three-quarter view of a white Toyota Land Cruiser Prado parked beside a lake',
+      },
+    ],
     isDemo: true,
     createdAt: '2026-11-20',
   },
@@ -69,7 +74,12 @@ export const demoVehicles: Vehicle[] = [
       'Parking sensors',
       'LED headlights',
     ],
-    images: [],
+    images: [
+      {
+        src: '/images/vehicles/2018-mercedes-benz-c200-avantgarde/01-front-three-quarter.webp',
+        alt: 'Front view of a black Mercedes-Benz C-Class saloon on a gravel road',
+      },
+    ],
     isDemo: true,
     createdAt: '2026-11-18',
   },
